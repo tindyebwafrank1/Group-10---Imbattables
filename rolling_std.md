@@ -44,7 +44,7 @@ The results were checked by manually calculating the standard deviation of the f
 5. Working Example
 Input:
 Enter the number of values: 7
-Enter 6 values: 10 25 30 45 50 65 75
+Enter 7 values: 10 25 30 45 50 65 75
 Enter the window size: 4
 
 Output:
