@@ -5,6 +5,8 @@ For example, if the data is:
 {1, 3, 2, 5, 4, 6, 2}
 and the window size is 3, the function checks:
 {1, 3, 2} → 3
+
+
 {3, 2, 5} → 5
 {2, 5, 4} → 5
 {5, 4, 6} → 6
