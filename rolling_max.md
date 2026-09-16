@@ -2,6 +2,7 @@ Rolling Maximum
 Description
 The rolling_max() function finds the maximum value in each consecutive window of a given size.
 For example, if the data is:
+
 {1, 3, 2, 5, 4, 6, 2}
 and the window size is 3, the function checks:
 {1, 3, 2} → 3

@@ -9,6 +9,7 @@ vector<int> rolling_max(vector<int> data, int k) {
 
     for (int i = 0; i <= data.size() - k; i++) {
         int maximum = data[i];
+        
 
         for (int j = i; j < i + k; j++) {
             if (data[j] > maximum) {
