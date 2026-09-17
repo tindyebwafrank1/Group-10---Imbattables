@@ -1,18 +1,15 @@
-# Moving Average Program in C++
+Moving Average Program in C++
 
-## Description
-
+Description
 This C++ program calculates the **moving average** of a set of numerical values using a user-defined window size.
 
 A moving average is calculated by taking a fixed number of consecutive values, finding their average, and then moving the window one position at a time.
 
-## Source Code
+Source Code
 
-```cpp
 #include <iostream>
 #include <iomanip>
 #include <vector>
-
 using namespace std;
 
 int main()
@@ -60,100 +57,78 @@ int main()
 
     return 0;
 }
-```
 
-## How the Program Works
+How the Program Works
 
-### 1. Include Libraries
-
+1. Include Libraries
 - `iostream` is used for input and output.
 - `iomanip` is used to format the output to two decimal places.
 - `vector` is used to store the numerical values.
 
-### 2. Get Input
-
+2. Get Input
 The program asks the user for:
-
 - The number of values (`n`)
 - The moving-average window size (`window`)
 
-### 3. Validate Input
-
+3. Validate Input
 The program checks that:
-
 - `n` is greater than 0.
 - `window` is greater than 0.
 - `window` is not larger than `n`.
 
 If any condition is invalid, the program displays `Invalid input.` and stops.
 
-### 4. Store the Values
+4. Store the Values
 
 A vector called `numbers` is created:
 
-```cpp
 vector<double> numbers(n);
-```
 
 The user then enters the required values.
 
-### 5. Calculate the Moving Average
-
+5. Calculate the Moving Average
 The outer loop moves the window through the vector:
 
-```cpp
 for (int i = 0; i <= n - window; i++)
-```
 
 The inner loop adds the values inside the current window:
 
-```cpp
 for (int j = i; j < i + window; j++)
 {
     sum += numbers[j];
 }
-```
 
 The average is then calculated using:
 
-```cpp
 double average = sum / window;
-```
 
-### 6. Format the Output
+6. Format the Output
 
 The result is displayed with two decimal places:
 
-```cpp
 cout << fixed << setprecision(2)
      << average << " ";
-```
 
-## Example
 
-### Input
+Example
+Input
 
-```text
 Enter number of values: 5
 Enter window size: 3
 Enter 5 values: 10 20 30 40 50
-```
 
-### Calculation
+Calculation
 
 For a window size of 3:
-
 - `(10 + 20 + 30) / 3 = 20.00`
 - `(20 + 30 + 40) / 3 = 30.00`
 - `(30 + 40 + 50) / 3 = 40.00`
 
-### Output
+Output
 
-```text
 Moving averages: 20.00 30.00 40.00
-```
 
-## Formula
+Formula
 
 For a window containing `w` values:
 
@@ -163,7 +138,7 @@ Moving\ Average = \frac{x_1+x_2+\cdots+x_w}{w}
 
 The window then moves one position forward and the calculation is repeated.
 
-## Time Complexity
+Time Complexity
 
 The program uses nested loops.
 
@@ -172,7 +147,7 @@ The program uses nested loops.
 
 The space is `O(n)` because the program stores all input values in a vector.
 
-## Requirements
+Requirements
 
 To compile and run the program, you need a C++ compiler such as:
 
@@ -182,19 +157,13 @@ To compile and run the program, you need a C++ compiler such as:
 - Clang
 
 For example, using `g++`:
-
-```bash
 g++ moving_average.cpp -o moving_average
-```
 
 Then run:
 
-```bash
 ./moving_average
-```
 
 On Windows, you can run:
 
-```bash
 moving_average.exe
-```
+
