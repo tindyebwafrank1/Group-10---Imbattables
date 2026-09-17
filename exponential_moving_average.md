@@ -1,12 +1,12 @@
-Task: Exponential Moving Average (EMA)
+# Task: Exponential Moving Average (EMA)
 
-Task Requirements
+## Task Requirements
 Implement a C++ program that computes the Exponential Moving Average (EMA)
 for a series of numeric data (e.g., daily stock closing prices), given a
 specified period (window size). The EMA gives more weight to recent data
 points than a Simple Moving Average (SMA).
 
-Implementation Strategy
+## Implementation Strategy
 - `computeEMA(prices, period)` takes a vector of prices and an integer
   period, and returns a vector of EMA values of the same length.
 - The multiplier (smoothing factor) is calculated as `2 / (period + 1)`.
@@ -22,7 +22,7 @@ Implementation Strategy
 - Basic input validation guards against an invalid period (`<= 0`) or a
   dataset smaller than the period.
 
-Key Decisions / Approaches
+## Key Decisions / Approaches
 - **Seeding with SMA** instead of just using the first price value, since
   this is the conventional and more statistically sound method.
 - **Separation of concerns**: `computeEMA` only calculates the data;
@@ -30,7 +30,7 @@ Key Decisions / Approaches
   independent of any console output.
 - Used `std::vector<double>` for flexibility with any dataset size.
 
-How the Solution Was Tested
+## How the Solution Was Tested
 - Compiled with `g++ -std=c++17 -o ema ema.cpp` and run directly.
 - Verified manually against known EMA values for a standard 5-day EMA
   example dataset (closing prices), cross-checked against the textbook
@@ -40,16 +40,16 @@ How the Solution Was Tested
     vector of zeros instead of crashing.
   - Period of exactly 1 → EMA equals the raw price series.
 
-Working Example
+## Working Example
 
 **Input** (hardcoded in `main()`, period = 5):
-
+```
 22.27, 22.19, 22.08, 22.17, 22.18, 22.13, 22.23, 22.43, 22.24, 22.29,
 22.15, 22.39, 22.38, 22.61, 23.36
-
+```
 
 **Output:**
-
+```
 Index | Price   | EMA(5)
 ------|---------|--------
     0 |   22.27 |   --
@@ -67,10 +67,10 @@ Index | Price   | EMA(5)
    12 |   22.38 | 22.32
    13 |   22.61 | 22.41
    14 |   23.36 | 22.73
+```
 
-
-How to Run
-
+## How to Run
+```bash
 g++ -std=c++17 -o ema ema.cpp
 ./ema
-
+```
