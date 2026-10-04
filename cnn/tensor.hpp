@@ -1,4 +1,4 @@
-// TEMPORARY STAND-IN for M4's Tensor (Week 1 interface standard).
+// TEMPORARY STAND-IN for Agatha's Tensor (Week 1 interface standard).
 // Used only when CMake option CNN_USE_TENSOR_STUB=ON. Delete once Agatha's PR is merged.
 #ifndef CNN_TENSOR_HPP
 #define CNN_TENSOR_HPP

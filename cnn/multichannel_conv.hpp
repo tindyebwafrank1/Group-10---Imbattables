@@ -1,7 +1,7 @@
 // multichannel_conv.hpp
-// Week 1 | Module M7 (Evarista): multi-channel / multi-filter convolution pass.
+// Week 1 | Module  (Ssempewo evalister): multi-channel / multi-filter convolution pass.
 //
-// Depends on: Tensor (M4, Agatha). Layout is NCHW in one contiguous vector<double>.
+// Depends on: Tensor ( Agatha). Layout is NCHW in one contiguous vector<double>.
 #ifndef CNN_MULTICHANNEL_CONV_HPP
 #define CNN_MULTICHANNEL_CONV_HPP
 
